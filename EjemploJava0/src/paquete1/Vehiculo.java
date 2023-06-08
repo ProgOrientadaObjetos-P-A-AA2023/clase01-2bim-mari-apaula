@@ -36,22 +36,26 @@ public class Vehiculo {
         return costo;
     }
     
-    
+    public String obtenerMatricula() {
+        return matricula;
+    }
+
+    public void establecerMatricula(String matricula) {
+        this.matricula = matricula;
+    }
 
     @Override
     public String toString(){
-        String cadena = String.format("Edificio de nombre %s\n"
-                + "\tEl costo del edificio es: %.2f", 
-                nombre,
+        
+        
+        String cadena = String.format("Tipo de vehiculo %s\n"
+                + "Matricula del vehiculo: %s\n"
+                + "\tEl costo del vehiculo es: %.2f", 
+                tipo,
+                matricula,
                 obtenerCosto());
         return cadena;
     }
 
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
+    
 }
